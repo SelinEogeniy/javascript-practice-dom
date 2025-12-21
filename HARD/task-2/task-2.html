@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search</title>
+    <!-- Підключення стилів -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./task-2.css" />
+
+    <!-- Підключення скриптів -->
+    <script type="module" src="./task-2.js"></script>
+  </head>
+  <body>
+    <p><a href="../index.html">Go back</a></p>
+
+    <section>
+      <div class="container">
+        <h2 class="visually-hidden">Car gallery</h2>
+
+        <form class="js-form car-search">
+          <div class="car-group">
+            <input
+              class="car-input"
+              type="text"
+              name="query"
+              placeholder="Пошук"
+            />
+          </div>
+          <div class="car-group">
+            <select class="car-select" name="options">
+              <option value="brand">Марка</option>
+              <option value="model">Модель</option>
+            </select>
+          </div>
+          <button class="car-button" type="submit">Пошук</button>
+        </form>
+
+        <ul class="js-list car-list"></ul>
+      </div>
+    </section>
+  </body>
+</html>
