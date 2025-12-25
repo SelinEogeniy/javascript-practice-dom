@@ -74,6 +74,12 @@ section {
 
 .car-list-item {
   width: calc((100% - 40px) / 3);
+  transform: scale(1);
+  transition: transform 300ms linear;
+}
+
+.car-list-item:hover {
+  transform: scale(1.05);
 }
 
 .car-list-img {

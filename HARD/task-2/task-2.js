@@ -90,9 +90,19 @@ const onFormSumbit = (evt) => {
   };
   console.log(formData);
 
+  if (formData.query === "") {
+    alert("Введіть назву машини");
+    return;
+  }
+
   const filteredCars = allCars.filter(
     (car) => car[formData.option] === formData.query
   );
+
+  if (filteredCars.length === 0) {
+    alert("Такой машини не знайдено.");
+    return;
+  }
 
   const carCardsTemplate = filteredCars
     .map((car) => createCardTemplate(car))
@@ -102,3 +112,5 @@ const onFormSumbit = (evt) => {
 };
 
 refs.form.addEventListener("submit", onFormSumbit);
+
+console.log("Finish");
